@@ -24,3 +24,10 @@ func TestArrayBegin(t *testing.T) {
 	t.Logf("arr1 len %d", len(arr1))
 }
 
+func TestArraySlice(t *testing.T) {
+	arr := [...]int{1, 2, 33, 22, 56}
+
+	arr1 := arr[:2] // (] 左闭右开区间,防止数组越界截取, arr[1:len(arr)]
+
+	t.Log(arr1)
+}
