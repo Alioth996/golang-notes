@@ -10,7 +10,7 @@ func TestWhileLoop(t *testing.T) {
 		// 	break
 		// }
 
-		// if n == 2 {
+		// if n == 2 { 死循环
 		// 	t.Log(n)
 		// 	continue
 		// }
