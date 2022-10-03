@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	testImplicit()
 	testPoint()
+	testString()
 }
 
 type MyInt int64
@@ -25,5 +26,16 @@ func testPoint() {
 	aPtr := &a
 	// aPtr += 1 指针不能运算
 	fmt.Println(a, aPtr)
-	fmt.Printf("%T %T", a, aPtr)
+	fmt.Printf("%T %T \n", a, aPtr)
+}
+
+func testString() {
+	var s string
+	// 字符串是数值类型,默认值为空字符,不是nil
+	if len(s) > 1 {
+		fmt.Println("ok")
+	} else {
+
+		fmt.Printf("no%s**", s)
+	}
 }
