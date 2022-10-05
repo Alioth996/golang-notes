@@ -77,10 +77,10 @@
 ```go
 
 // 1.var 关键字
-var m = map[string]int
+var m = map[string]int{}
 
 // 2.简写
-m1 := map[string]int
+m1 := map[string]int{}
 
 // 3.声明并初始化
 m2 := map[string]int{"one":1,"two":2}
