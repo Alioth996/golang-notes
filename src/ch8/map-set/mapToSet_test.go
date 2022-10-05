@@ -14,13 +14,18 @@ func TestMapToFactoryModel(t *testing.T) {
 }
 
 func TestMapForSet(t *testing.T) {
-	mySet := map[int]bool{1: true, 2: true, 0: false}
+	mySet := map[int]string{1: "true", 2: "true", 0: "false"}
 
 	n := 5
 	if v, ok := mySet[n]; ok {
-		t.Logf("%t is existing", v)
+		t.Logf("%s is existing", v)
 	} else {
 		// 添加k-v
-		t.Log("append k-v")
+		t.Log("k-v no existing...")
+		t.Logf("append myset[%d]=%s...", n, "hello")
+		mySet[n] = "hello"
+		t.Log("append finish...")
 	}
+
+	t.Log(mySet)
 }
