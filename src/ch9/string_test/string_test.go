@@ -1,6 +1,8 @@
 package string_test
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestStringTry(t *testing.T) {
 	s := "hello"
@@ -20,4 +22,18 @@ func TestStringTry(t *testing.T) {
 	// 取16进制编码值
 	t.Logf("中 unicode: %x", c[0])
 	t.Logf("中 utf8:%x", s)
+}
+
+func TestStringToRune(t *testing.T) {
+	s := "李时珍的皮"
+
+	for _, v := range s {
+		// 输出:
+		// 李 674e
+		// 时 65f6
+		// 珍 73cd
+		// 的 7684
+		// 皮 76ae
+		t.Logf("%c:%x", v, v)
+	}
 }
