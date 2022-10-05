@@ -73,8 +73,9 @@
 2. 初始化 len 没有意义,因为`key-value`结构并不能是默认值
 3. `Map` 不能使用 `cap()`函数求容量 **Map 声明**:
 
-```go
+Map 声明:
 
+```go
 // 1.var 关键字
 var m = map[string]int{}
 
@@ -86,5 +87,11 @@ m2 := map[string]int{"one":1,"two":2}
 
 // 4.make关键字 适合已知容量
 m3 := make(map[string]int,10,/*cap*/)
+
+```
+
+Map 实现 Set:
+
+```go
 
 ```
