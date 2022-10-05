@@ -59,3 +59,13 @@ func TestSliceShareMem(t *testing.T) {
 	t.Log(months)
 
 }
+
+func TestSliceComparing(t *testing.T) {
+	s1 := []int{1, 2, 3, 4}
+	s2 := []int{1, 2, 3, 4}
+
+	// slice之间不能进行比骄,只能nil比较
+	if s1 == s2 {
+		t.Log("same")
+	}
+}
