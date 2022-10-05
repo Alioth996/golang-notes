@@ -65,7 +65,8 @@ func TestSliceComparing(t *testing.T) {
 	s2 := []int{1, 2, 3, 4}
 
 	// slice之间不能进行比骄,只能nil比较
-	if s1 == s2 {
-		t.Log("same")
-	}
+	// if s1 == s2 {
+	// 	t.Log("same")
+	// }
+	s1, s2 = s2, s1
 }
