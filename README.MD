@@ -122,3 +122,8 @@ func TestMapForSet(t *testing.T) {
 2. string 默认值为空字符 不是 nil
 3. string 是只读的 byte slice, len 函数可以获取它所包含的 byte 数
 4. string 的 byte 数组可以存放任意数据, 包括但不限于 英文,汉字,特殊字符,二进制数据...
+
+---
+**字符串底层编码逻辑:**
+
+![](src/assets/images/bianma.jpg)
