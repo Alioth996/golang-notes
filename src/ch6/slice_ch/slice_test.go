@@ -56,5 +56,6 @@ func TestSliceShareMem(t *testing.T) {
 
 	t.Log(spring, springLen, springCap)
 	t.Log(summer, summerLen, summerCap)
+	t.Log(months)
 
 }
