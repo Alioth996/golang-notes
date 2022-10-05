@@ -9,5 +9,6 @@ func TestMapToSetTry(t *testing.T) {
 	m["getSelf"] = func(num int) int { return num }
 	m["sqrtNum"] = func(num int) int { return num * num }
 
-	// t.Logf("m[getSelf] type:%T", m["getSelf"])
+	t.Log(m["getSelf"](10))
+	t.Log(m["sqrtNum"](10))
 }
