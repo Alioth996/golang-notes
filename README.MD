@@ -49,12 +49,13 @@
 
 ---
 
-### 切片
+### slice
 
 简单可以理解为可变长度的数组
 
-1. len 表示切片内可访问的元素长度
-2. cap 表示切片的可拓展容量,`cap = cap \* 2`
+1. **len** 表示切片内可访问的元素长度
+2. **cap** 表示切片的可拓展容量,`cap = cap \* 2`
+3. **slice**只能与**nil**比较
 
 ![切片的数据结构](./src/assets/images/slice.jpg)
 
@@ -63,3 +64,9 @@
 ### 切片共享数据
 
 ![slice共享数据](src/assets/images/share-mem-slice.jpg)
+
+---
+
+### Map
+
+- 键值对数据结构
