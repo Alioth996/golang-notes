@@ -44,19 +44,17 @@ func TestSliceShareMem(t *testing.T) {
 	months := []string{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
 
 	// 研究切片的len与cap变化
-	spring := months[:3]
-	summer := months[3:6]
-	autumn := months[6:9]
-	winner := months[9:]
+	spring := months[:6]
+	summer := months[5:]
 
-	springLen := len(spring) // 3
+	springLen := len(spring) // 6
 	springCap := cap(spring) // 12
 
-	summerLen := len(summer) // 3
-	summerCap := cap(summer) // 9
+	summer[0] = "hello"
+	summerLen := len(summer) // 7
+	summerCap := cap(summer) // 7
 
-	t.Log(springLen, springCap)
-	t.Log(summerLen, summerCap)
+	t.Log(spring, springLen, springCap)
+	t.Log(summer, summerLen, summerCap)
 
-	t.Log(spring, summer, autumn, winner)
 }
